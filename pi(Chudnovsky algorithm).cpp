@@ -2,7 +2,7 @@
 #include <cmath>
 #include <iomanip>
 
-double fact(int digit)
+double fact(int digit)   // Factorial function
 {
     double result = 1;
     for (int i=digit; i>1; i--)
@@ -21,5 +21,5 @@ int main()
         pi += ( pow(-1, k)*fact((6*k))*(13591409+545140134*k))/(fact(3*k)*pow(fact(k),3)*pow(640320, (3*k+1.5)));
     }
     pi = 1.0/(12*pi);
-    std::cout<<std::setprecision(50)<<pi<<'\n'<<M_PI<<'\n';
+    std::cout<<std::setprecision(50)<<pi<<'\n'<<M_PI<<'\n'; //M_PI is a macro inside math library. setprecision is std function.
 }  
